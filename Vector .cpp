@@ -109,7 +109,7 @@ int main ()
     cout << *max_element( a.begin(), a.end() ) << endl; /// 5
 
 
-    //remove any value from vector
+    //remove any value from vector using iterator
     for (auto it = v.begin(); it != v.end(); ) {
             if (*it == 0) {
             cnt++; 
@@ -119,6 +119,14 @@ int main ()
         }
     }
 
+    //Another easy way to remove any value from vector
+     v.erase(remove(v.begin(), v.end(), x), v.end()); 
+    // remove(....) does not erase elements from the vector,
+    //Moves all elements not equal to x to the front.
+    //Returns an iterator pointing to the new logical end of the vector.
+    //erase(...) removes the trailing junk:
+    
     return 0;
 
 }
+
