@@ -108,5 +108,17 @@ int main ()
     cout << max_element( a.begin(), a.end() ) - a.begin() << endl; /// 3
     cout << *max_element( a.begin(), a.end() ) << endl; /// 5
 
+
+    //remove any value from vector
+    for (auto it = v.begin(); it != v.end(); ) {
+            if (*it == 0) {
+            cnt++; 
+            it = v.erase(it);
+            } else {
+            ++it;
+        }
+    }
+
     return 0;
+
 }
