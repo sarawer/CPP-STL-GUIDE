@@ -13,7 +13,7 @@ int main(){
 	//lower_bound:
 	auto lb=lower_bound(v.begin(),v.end(),6);
         
-        //upper_bound:
+    /upper_bound:
 	auto ub=upper_bound(v.begin(),v.end(),6);
 
 	cout<<(lb-v.begin())<<endl; //output:4
